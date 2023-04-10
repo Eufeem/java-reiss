@@ -19,7 +19,6 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<User>> getAll() {
-
         return new ResponseEntity<>(userService.getAll(), HttpStatus.OK);
     }
 
