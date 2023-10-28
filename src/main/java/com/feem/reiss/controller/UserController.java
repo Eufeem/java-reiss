@@ -46,8 +46,8 @@ public class UserController {
 
     @PostMapping("/findByName")
     public ResponseEntity<List<User>> getByName(@RequestBody User user) {
-        System.out.println(user.getName());
-        return new ResponseEntity<List<User>>(userService.findByName(user.getName()), HttpStatus.OK);
+        System.out.println(user.getFirstName());
+        return new ResponseEntity<List<User>>(userService.findByName(user.getFirstName()), HttpStatus.OK);
     }
 
     @GetMapping("/xlxs")

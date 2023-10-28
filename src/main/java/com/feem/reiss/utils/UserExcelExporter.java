@@ -65,7 +65,7 @@ public class UserExcelExporter {
             Row row = sheet.createRow(rowCount++);
             int columnCount = 0;
             createCell(row, columnCount++, user.getIdUser(), style);
-            createCell(row, columnCount++, user.getName(), style);
+            createCell(row, columnCount++, user.getFirstName(), style);
             createCell(row, columnCount++, user.getLastName(), style);
             createCell(row, columnCount++, user.getUsername(), style);
             createCell(row, columnCount++, user.getEmail(), style);

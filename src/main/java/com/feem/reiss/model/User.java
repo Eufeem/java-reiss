@@ -2,32 +2,27 @@ package com.feem.reiss.model;
 
 import javax.persistence.*;
 
-@Entity(name = "users")
-@Table(name = "USERS", schema = "")
+@Entity
+@Table(name = "USER")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_USER")
     private Integer idUser;
-
-    @Column(name = "NAME")
-    private String name;
-
-    @Column(name = "LAST_NAME")
-    private String lastName;
 
     @Column(name = "USERNAME")
     private String username;
 
-    @Column(name = "PASSWORD")
-    private String password;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+
+    @Column(name = "LAST_NAME")
+    private String lastName;
 
     @Column(name = "EMAIL")
     private String email;
 
-    @Column(name = "STATUS")
-    private Integer status;
 
     public Integer getIdUser() {
         return idUser;
@@ -35,22 +30,6 @@ public class User {
 
     public void setIdUser(Integer idUser) {
         this.idUser = idUser;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getUsername() {
@@ -61,12 +40,20 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -75,13 +62,5 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
     }
 }

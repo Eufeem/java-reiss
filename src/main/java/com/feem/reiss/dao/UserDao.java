@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface UserDao extends JpaRepository<User, Integer> {
-    @Query(value = "SELECT * FROM USERS WHERE NAME LIKE %?1%", nativeQuery = true)
+    @Query(value = "SELECT * FROM USER WHERE USERNAME LIKE %?1%", nativeQuery = true)
     List<User> findByName(String name);
 }
