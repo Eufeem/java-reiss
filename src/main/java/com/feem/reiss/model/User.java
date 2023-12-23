@@ -11,6 +11,7 @@ public class User {
     @Column(name = "ID_USER")
     private Integer idUser;
 
+
     @Column(name = "USERNAME")
     private String username;
 
