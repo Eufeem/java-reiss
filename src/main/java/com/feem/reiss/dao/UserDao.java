@@ -5,8 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserDao extends JpaRepository<User, Integer> {
     @Query(value = "SELECT * FROM USER WHERE USERNAME LIKE %?1%", nativeQuery = true)
     List<User> findByName(String name);
+
+    Optional<User> findByUsername(String username);
 }

@@ -17,3 +17,5 @@ Personal development project with examples using Java with Spring boot and other
 + JPA
 + Swagger
 + My SQL Connector
++ Spring Security
++ Lombok
